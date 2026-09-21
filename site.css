@@ -1,0 +1,403 @@
+:root {
+  --red: #ed1c24;
+  --black: #090909;
+  --panel: #171717;
+  --gray: #bbbbbb;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.75rem;
+  color: #000000;
+  background: #ffffff;
+  z-index: 99;
+}
+
+/* Header */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(1120px, 90%);
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.65rem;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.brand span,
+.price,
+.required {
+  color: var(--red);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--red);
+}
+
+/* Hero */
+
+.hero {
+    min-height: 610px;
+    padding: 6rem 1rem;
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/dirt-bike-hero.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-inner {
+  max-width: 850px;
+}
+
+.eyebrow {
+  color: #ff6268;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.page-head h1 {
+  margin: 0.5rem 0 1.2rem;
+  font-size: clamp(2.7rem, 8vw, 5.8rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #dddddd;
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  margin: 0.35rem;
+  padding: 0.9rem 1.35rem;
+  color: #ffffff;
+  background: var(--red);
+  border-radius: 0.35rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #c9151c;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+/* Sections */
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 760px;
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--panel);
+  border-top: 4px solid var(--red);
+  border-radius: 0.35rem;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+/* Steps */
+
+.steps {
+  counter-reset: step;
+}
+
+.step::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  display: block;
+  color: var(--red);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* Call to action */
+
+.cta {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--red);
+}
+
+.cta .button {
+  background: #0b0b0b;
+}
+
+/* Interior page header */
+
+.page-head {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #222222, #080808);
+  border-bottom: 5px solid var(--red);
+}
+
+/* Services */
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 4rem 0;
+}
+
+.services .card {
+  border: 1px solid #333333;
+  border-top: 4px solid var(--red);
+}
+
+.price-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed #555555;
+}
+
+.price {
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.note,
+.notice {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #231012;
+  border-left: 5px solid var(--red);
+}
+
+/* Forms */
+
+.form {
+  padding: clamp(1rem, 4vw, 2.5rem);
+  background: var(--panel);
+  border-radius: 0.4rem;
+}
+
+fieldset {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #444444;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: #ff555b;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.85rem;
+  color: #ffffff;
+  background: #0d0d0d;
+  border: 1px solid #555555;
+  border-radius: 0.25rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.submit {
+  padding: 1rem;
+  color: #ffffff;
+  background: var(--red);
+  border: 0;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.contact-card {
+  padding: 2rem;
+  background: var(--panel);
+  border-radius: 0.4rem;
+}
+
+.contact-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.contact-item a {
+  color: #ff6268;
+}
+
+/* Footer */
+
+.footer {
+  padding: 2rem 0;
+  color: #bbbbbb;
+  text-align: center;
+  border-top: 1px solid #333333;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .top-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .grid,
+  .services,
+  .contact-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .price-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+}
