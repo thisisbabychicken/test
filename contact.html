@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Contact ScrubMoto for dirt bike repair and service questions."
+  >
+
+  <title>ScrubMoto | Contact</title>
+
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+  <a href="#main" class="skip">Skip to main content</a>
+
+  <header>
+    <div class="top-bar">
+      <a class="brand" href="index.html">
+        SCRUB<span>MOTO</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+
+          <li>
+            <a href="contact.html" aria-current="page">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <h1>Contact ScrubMoto</h1>
+
+        <p class="lead">
+          Have a question about a repair or service?
+          Call, text or send us a message.
+        </p>
+      </div>
+    </section>
+
+    <section class="container contact-grid">
+      <article class="contact-card">
+        <h2>Get in Touch</h2>
+
+        <div class="contact-item">
+          <strong>Call or Text</strong><br>
+
+          <a href="tel:+15416215098">
+            (541) 621-5098
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Email</strong><br>
+
+          <a href="mailto:scrubmoto@outlook.com">
+            scrubmoto@outlook.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Service Availability</strong><br>
+          By appointment. Contact us for current availability
+          and shop location.
+        </div>
+
+        <p>
+          <a class="button" href="booking.html">
+            Schedule Service
+          </a>
+        </p>
+      </article>
+
+      <article>
+        <form
+          class="form"
+          action="https://pcc-webdev.com/cis195h/pht/formInfo.php"
+          method="post"
+        >
+          <h2>Send a Message</h2>
+
+          <fieldset>
+            <legend>Your Details</legend>
+
+            <label for="name">
+              Name
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              id="name"
+              autocomplete="name"
+              required
+            >
+
+            <label for="email">
+              Email
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              required
+            >
+
+            <label for="phone">Phone</label>
+
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              autocomplete="tel"
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Your Message</legend>
+
+            <label for="subject">Subject</label>
+
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+            >
+
+            <label for="message">
+              How can we help?
+              <span class="required">*</span>
+            </label>
+
+            <textarea
+              name="message"
+              id="message"
+              required
+            ></textarea>
+          </fieldset>
+
+          <input
+            class="submit"
+            type="submit"
+            value="Send Message"
+          >
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ScrubMoto. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

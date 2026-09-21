@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Request a ScrubMoto dirt bike service appointment."
+  >
+
+  <title>ScrubMoto | Schedule Service</title>
+
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+  <a href="#main" class="skip">Skip to main content</a>
+
+  <header>
+    <div class="top-bar">
+      <a class="brand" href="index.html">
+        SCRUB<span>MOTO</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+
+          <li>
+            <a href="schedule.html" aria-current="page">
+              Schedule
+            </a>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <h1>Schedule Service</h1>
+
+        <p class="lead">
+          Tell us about your bike and select a preferred
+          drop-off time.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 900px;">
+        <div class="notice">
+          <strong>This is a service request.</strong>
+          Your appointment is not confirmed until ScrubMoto
+          contacts you by phone, text or email.
+        </div>
+
+        <form
+          class="form"
+          action="https://pcc-webdev.com/cis195h/pht/formInfo.php"
+          method="post"
+        >
+          <fieldset>
+            <legend>Service Needed</legend>
+
+            <label for="service">
+              Choose a service
+              <span class="required">*</span>
+            </label>
+
+            <select name="service" id="service" required>
+              <option value="">-- Please select --</option>
+              <option value="Tire Change">Tire Change</option>
+              <option value="Oil and Filter">Oil & Filter</option>
+              <option value="Valve Service">Valve Service</option>
+              <option value="Bearing Service">Bearing Service</option>
+              <option value="Full Bike Lube">Full Bike Lube</option>
+              <option value="General Repair">General Repair</option>
+              <option value="Pre-Race Preparation">
+                Pre-Race Preparation
+              </option>
+              <option value="Diagnostic">
+                Not Sure / Diagnostic
+              </option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contact Information</legend>
+
+            <div class="two-col">
+              <div>
+                <label for="fname">
+                  First name
+                  <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  name="first_name"
+                  id="fname"
+                  autocomplete="given-name"
+                  required
+                >
+              </div>
+
+              <div>
+                <label for="lname">
+                  Last name
+                  <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  name="last_name"
+                  id="lname"
+                  autocomplete="family-name"
+                  required
+                >
+              </div>
+            </div>
+
+            <label for="email">
+              Email
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              required
+            >
+
+            <label for="phone">
+              Phone number
+              <span class="required">*</span>
+            </label>
+
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              autocomplete="tel"
+              required
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Bike Information</legend>
+
+            <div class="two-col">
+              <div>
+                <label for="year">Year</label>
+
+                <input
+                  type="number"
+                  name="bike_year"
+                  id="year"
+                  min="1970"
+                  max="2030"
+                >
+              </div>
+
+              <div>
+                <label for="make">Make</label>
+
+                <input
+                  type="text"
+                  name="bike_make"
+                  id="make"
+                  placeholder="Honda, Yamaha, KTM..."
+                >
+              </div>
+            </div>
+
+            <label for="model">Model</label>
+
+            <input
+              type="text"
+              name="bike_model"
+              id="model"
+            >
+
+            <label for="running">
+              Is the bike currently running?
+            </label>
+
+            <select name="bike_running" id="running">
+              <option value="">-- Select --</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+              <option value="Sometimes">Sometimes</option>
+            </select>
+
+            <label for="issue">
+              Describe the issue or requested work
+              <span class="required">*</span>
+            </label>
+
+            <textarea
+              name="service_details"
+              id="issue"
+              required
+            ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferred Drop-Off</legend>
+
+            <div class="two-col">
+              <div>
+                <label for="date">Preferred date</label>
+
+                <input
+                  type="date"
+                  name="preferred_date"
+                  id="date"
+                >
+              </div>
+
+              <div>
+                <label for="time">Preferred time</label>
+
+                <select name="preferred_time" id="time">
+                  <option value="">-- Select --</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <input
+            class="submit"
+            type="submit"
+            value="Submit Service Request"
+          >
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Prefer to speak with us? Call or text
+        <a href="tel:+15416215098">(541) 621-5098</a>.
+      </p>
+
+      <p>&copy; 2026 ScrubMoto. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
